@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roberto Oliveira — Desenvolvedor .NET Sênior &amp; Líder Técnico | roberto.inf.br</title>
+  <meta name="description" content="Roberto Oliveira: desenvolvedor full stack .NET sênior e líder técnico com 19+ anos de experiência. C#, .NET 10, React, TypeScript, IA aplicada. Também crio sites acessíveis para empresas e profissionais.">
+  <meta name="author" content="Roberto Oliveira">
+  <link rel="canonical" href="https://roberto.inf.br/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://roberto.inf.br/">
+  <meta property="og:title" content="Roberto Oliveira — Desenvolvedor .NET Sênior & Líder Técnico">
+  <meta property="og:description" content="19+ anos construindo sistemas no ecossistema Microsoft. Líder técnico, professor universitário e criador de sites acessíveis.">
+  <meta property="og:image" content="https://roberto.inf.br/assets/roberto.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Roberto Oliveira",
+    "url": "https://roberto.inf.br",
+    "image": "https://roberto.inf.br/assets/roberto.jpg",
+    "jobTitle": "Desenvolvedor .NET Sênior | Líder Técnico",
+    "email": "mailto:roberto@roberto.inf.br",
+    "telephone": "+55-61-99848-4160",
+    "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" },
+    "sameAs": [
+      "https://github.com/euroberto-br",
+      "https://www.linkedin.com/in/roberto084"
+    ],
+    "knowsAbout": ["C#", ".NET", "React", "TypeScript", "SQL Server", "Oracle", "Docker", "Kubernetes", "Azure DevOps", "Inteligência Artificial", "Arquitetura de Software", "Acessibilidade Web"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Anúncios para leitores de tela -->
+  <div id="announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+
+  <!-- Guia de leitura (régua) -->
+  <div id="reading-guide" aria-hidden="true" hidden></div>
+
+  <!-- ===== Barra de acessibilidade (eMAG) ===== -->
+  <div class="a11y-bar" role="region" aria-label="Barra de acessibilidade" data-i18n-aria-label="a11ybar">
+    <div class="container a11y-bar__inner">
+      <ul class="a11y-bar__shortcuts">
+        <li><a accesskey="1" href="#conteudo"><span aria-hidden="true">1</span> <span data-i18n="skip_content">Ir para o conteúdo</span></a></li>
+        <li><a accesskey="2" href="#menu"><span aria-hidden="true">2</span> <span data-i18n="skip_menu">Ir para o menu</span></a></li>
+        <li><a accesskey="3" href="#contato"><span aria-hidden="true">3</span> <span data-i18n="skip_contact">Ir para o contato</span></a></li>
+        <li><a accesskey="4" href="#rodape"><span aria-hidden="true">4</span> <span data-i18n="skip_footer">Ir para o rodapé</span></a></li>
+      </ul>
+      <div class="a11y-bar__controls">
+        <button type="button" id="btn-font-dec" class="a11y-btn" aria-label="Diminuir tamanho da fonte" data-i18n-aria-label="font_dec">A−</button>
+        <button type="button" id="btn-font-reset" class="a11y-btn" aria-label="Tamanho de fonte padrão" data-i18n-aria-label="font_reset">A</button>
+        <button type="button" id="btn-font-inc" class="a11y-btn" aria-label="Aumentar tamanho da fonte" data-i18n-aria-label="font_inc">A+</button>
+        <button type="button" id="btn-contrast" class="a11y-btn" aria-pressed="false" aria-label="Alternar alto contraste" data-i18n-aria-label="contrast"><span aria-hidden="true">◐</span> <span data-i18n="contrast_label">Contraste</span></button>
+        <button type="button" id="btn-theme" class="a11y-btn" aria-pressed="false" aria-label="Alternar tema claro ou escuro" data-i18n-aria-label="theme"><span aria-hidden="true" id="theme-icon">☀</span> <span data-i18n="theme_label">Tema</span></button>
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+          <button type="button" class="a11y-btn lang-btn" data-lang="pt" lang="pt-BR" aria-pressed="true">PT</button>
+          <button type="button" class="a11y-btn lang-btn" data-lang="en" lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="topo">
+    <div class="container site-header__inner">
+      <a href="#topo" class="brand" aria-label="Roberto Oliveira — início" data-i18n-aria-label="brand_home">
+        <span class="brand__prompt" aria-hidden="true">~/</span>roberto<span class="brand__accent">.inf.br</span><span class="brand__cursor" aria-hidden="true">_</span>
+      </a>
+      <nav id="menu" aria-label="Menu principal" data-i18n-aria-label="nav_main">
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menu" data-i18n-aria-label="nav_open">
+          <span aria-hidden="true">☰</span>
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#sobre" data-i18n="nav_about">Sobre</a></li>
+          <li><a href="#trajetoria" data-i18n="nav_journey">Trajetória</a></li>
+          <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+          <li><a href="#servicos" data-i18n="nav_services">Serviços</a></li>
+          <li><a href="#portfolio" data-i18n="nav_portfolio">Portfólio</a></li>
+          <li><a href="#contato" class="nav-cta" data-i18n="nav_contact">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas id="particles" class="hero__particles" aria-hidden="true"></canvas>
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow mono"><span aria-hidden="true">$</span> whoami</p>
+          <h1 id="hero-title">Roberto Oliveira</h1>
+          <p class="hero__role mono" aria-live="off">
+            <span id="typed" data-i18n-skip>Desenvolvedor .NET Sênior</span><span class="type-cursor" aria-hidden="true">▌</span>
+          </p>
+          <p class="hero__pitch" data-i18n="hero_pitch">
+            Há mais de 19 anos transformo problemas complexos em sistemas que funcionam.
+            Líder técnico de 20+ desenvolvedores, professor universitário e apaixonado
+            por código limpo, IA aplicada e acessibilidade.
+          </p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="https://wa.me/5561998484160?text=Ol%C3%A1%20Roberto!%20Vi%20seu%20site%20roberto.inf.br%20e%20gostaria%20de%20conversar."
+               target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.16-1.32A10 10 0 1 0 12 2Zm5.46 14.12c-.23.65-1.35 1.24-1.86 1.28-.5.05-.97.24-3.27-.68-2.77-1.1-4.53-3.93-4.67-4.11-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.28.55-.35.73-.35h.53c.17 0 .4-.06.62.48.23.55.78 1.9.85 2.04.07.14.11.3.02.48-.09.18-.13.3-.27.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.28.14.44.11.6-.07.16-.18.69-.8.87-1.08.18-.27.37-.23.62-.14.25.1 1.59.75 1.86.89.27.14.46.2.52.32.07.11.07.65-.16 1.29Z"/></svg>
+              <span data-i18n="cta_whatsapp">Falar no WhatsApp</span>
+            </a>
+            <a class="btn btn--ghost" href="https://github.com/euroberto-br" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.3-5.23-1.28-5.23-5.7 0-1.25.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.8 1.18 1.84 1.18 3.1 0 4.42-2.68 5.38-5.24 5.67.41.35.77 1.05.77 2.12v3.15c0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+              GitHub
+            </a>
+            <a class="btn btn--ghost" id="cv-link" href="cv/Roberto_Oliveira_Curriculo_PT.pdf" download>
+              <span aria-hidden="true">⬇</span> <span data-i18n="cta_cv">Baixar CV</span>
+            </a>
+          </div>
+          <ul class="hero__badges mono" aria-label="Principais tecnologias" data-i18n-aria-label="hero_stack">
+            <li>C#</li><li>.NET 10</li><li>React</li><li>TypeScript</li><li>SQL</li><li>Docker</li><li>K8s</li><li>IA</li>
+          </ul>
+        </div>
+
+        <!-- Terminal interativo -->
+        <div class="terminal" role="group" aria-label="Terminal interativo — digite help para ver os comandos" data-i18n-aria-label="term_region">
+          <div class="terminal__bar">
+            <span class="terminal__dot terminal__dot--r" aria-hidden="true"></span>
+            <span class="terminal__dot terminal__dot--y" aria-hidden="true"></span>
+            <span class="terminal__dot terminal__dot--g" aria-hidden="true"></span>
+            <span class="terminal__title mono">roberto@inf.br: ~</span>
+          </div>
+          <div id="term-output" class="terminal__output mono" role="log" aria-live="polite"></div>
+          <div class="terminal__input-row mono">
+            <label for="term-input" class="terminal__prompt"><span class="visually-hidden" data-i18n="term_label">Digite um comando do terminal.</span><span aria-hidden="true">$</span></label>
+            <input type="text" id="term-input" class="terminal__input mono" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="help" data-i18n-skip>
+          </div>
+        </div>
+      </div>
+      <a class="hero__scroll mono" href="#sobre" aria-hidden="true" tabindex="-1">▼ scroll</a>
+    </section>
+
+    <!-- ===== Sobre ===== -->
+    <section class="section" id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <p class="eyebrow mono"><span aria-hidden="true">01</span> // <span data-i18n="about_eyebrow">sobre mim</span></p>
+        <h2 id="sobre-title" data-i18n="about_title">Do código à liderança — e à sala de aula</h2>
+        <div class="sobre__grid">
+          <div class="sobre__photo-wrap">
+            <img src="assets/roberto.jpg" alt="Foto de Roberto Oliveira: homem de barba grisalha e cabeça raspada, sorrindo levemente." data-i18n-alt="photo_alt" width="640" height="640" class="sobre__photo">
+            <p class="sobre__location mono"><span aria-hidden="true">📍</span> <span data-i18n="about_location">São Paulo/SP · remoto</span></p>
+          </div>
+          <div class="sobre__bio">
+            <p data-i18n="about_p1">Comecei a programar profissionalmente em 2006 e nunca mais parei. Hoje sou Especialista de TI e líder técnico na FUNCEF, onde conduzo a frente técnica da transformação digital: a modernização completa do ERP corporativo, de Delphi para .NET 10 com React e TypeScript, em arquitetura de microsserviços com Docker, Kubernetes e Azure DevOps.</p>
+            <p data-i18n="about_p2">Os sistemas que minha equipe constrói atendem 500 usuários internos e 200 mil participantes. Além de liderar mais de 20 desenvolvedores, atuo com arquitetura de software, engenharia de requisitos, code review e mentoria — e aplico IA no ciclo de desenvolvimento e dentro dos próprios sistemas.</p>
+            <p data-i18n="about_p3">Também sou professor: já lecionei em cursos superiores (UNIPLAN), no SENAI/DF e ensino tecnologia e robótica para crianças. Ensinar me obriga a manter o que todo bom código precisa: clareza. E nos projetos que desenvolvo, acessibilidade não é opcional — todo site que entrego segue as diretrizes do eMAG e da WCAG.</p>
+            <ul class="stats" role="list">
+              <li class="stat"><span class="stat__num mono" data-count="19">19+</span><span class="stat__label" data-i18n="stat_years">anos de experiência</span></li>
+              <li class="stat"><span class="stat__num mono" data-count="20">20+</span><span class="stat__label" data-i18n="stat_devs">devs liderados</span></li>
+              <li class="stat"><span class="stat__num mono" data-count="200">200 mil</span><span class="stat__label" data-i18n="stat_users">usuários atendidos</span></li>
+              <li class="stat"><span class="stat__num mono" data-count="5">5</span><span class="stat__label" data-i18n="stat_certs">certificações Microsoft</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Trajetória ===== -->
+    <section class="section section--alt" id="trajetoria" aria-labelledby="traj-title">
+      <div class="container">
+        <p class="eyebrow mono"><span aria-hidden="true">02</span> // <span data-i18n="traj_eyebrow">trajetória</span></p>
+        <h2 id="traj-title" data-i18n="traj_title">20 anos em versão de produção</h2>
+        <ol class="timeline" role="list">
+          <li class="tl-item">
+            <span class="tl-year mono">2017—<span data-i18n="tl_now">hoje</span></span>
+            <h3>FUNCEF</h3>
+            <p class="tl-role" data-i18n="tl_funcef_role">Especialista em TI — Líder Técnico de Desenvolvimento</p>
+            <p data-i18n="tl_funcef_desc">Liderança da equipe de 20+ devs, modernização do ERP (Delphi → .NET 10 + React/TS, microsserviços), sistemas previdenciários para 200 mil participantes, adoção de IA no desenvolvimento.</p>
+            <p class="tl-stack mono" aria-hidden="true">C# · .NET 10 · React · TS · SQL Server · Oracle · Docker · K8s · Azure DevOps</p>
+          </li>
+          <li class="tl-item">
+            <span class="tl-year mono">2013—2026</span>
+            <h3 data-i18n="tl_teach_title">Docência — SENAI/DF, UNIPLAN, Colégio Paulo de Tarso</h3>
+            <p class="tl-role" data-i18n="tl_teach_role">Instrutor, Professor Assistente e Professor de Tecnologia e Robótica</p>
+            <p data-i18n="tl_teach_desc">Do técnico ao ensino superior: desenvolvimento de sistemas, ADS, processos gerenciais e robótica para o fundamental II. Treinador de alunos na Olimpíada do Conhecimento e mentor voluntário no AceleraDev (Codenation).</p>
+          </li>
+          <li class="tl-item">
+            <span class="tl-year mono">2016—2017</span>
+            <h3>GEAP · BrScan</h3>
+            <p class="tl-role" data-i18n="tl_geap_role">Coordenador de Sistemas · Analista de Sistemas</p>
+            <p data-i18n="tl_geap_desc">Gestão de equipe de desenvolvimento, contratos de TI e governança de sistemas na GEAP; desenvolvimento .NET na BrScan.</p>
+          </li>
+          <li class="tl-item">
+            <span class="tl-year mono">2006—2016</span>
+            <h3 data-i18n="tl_early_title">A base: 10 anos de trincheira</h3>
+            <p class="tl-role" data-i18n="tl_early_role">Desenvolvedor e Analista de Sistemas Sênior</p>
+            <p data-i18n="tl_early_desc">CAIXA Seguros, FPC, Mirante, Next, PAR Corretora, ATP, Hepta, Comp Line e SENAI: sistemas para seguros, integrações web/mobile com RFID, sustentação de legados e muito .NET.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <p class="eyebrow mono"><span aria-hidden="true">03</span> // skills</p>
+        <h2 id="skills-title" data-i18n="skills_title">Stack &amp; competências</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3 class="mono">backend/</h3>
+            <ul role="list"><li>C# · .NET 10</li><li>ASP.NET Core · Web API</li><li data-i18n="sk_micro">Microsserviços · REST</li><li>Entity Framework Core</li></ul>
+          </div>
+          <div class="skill-card">
+            <h3 class="mono">frontend/</h3>
+            <ul role="list"><li>React · TypeScript</li><li>JavaScript · HTML5 · CSS3</li><li data-i18n="sk_a11y">Acessibilidade (eMAG/WCAG)</li></ul>
+          </div>
+          <div class="skill-card">
+            <h3 class="mono">data/</h3>
+            <ul role="list"><li>SQL Server · Oracle</li><li data-i18n="sk_model">Modelagem de dados</li><li>Python</li></ul>
+          </div>
+          <div class="skill-card">
+            <h3 class="mono">devops/</h3>
+            <ul role="list"><li>Docker · Kubernetes</li><li>Azure DevOps · CI/CD</li><li>Git</li></ul>
+          </div>
+          <div class="skill-card">
+            <h3 class="mono">ia/</h3>
+            <ul role="list"><li data-i18n="sk_ia1">IA no ciclo de desenvolvimento</li><li data-i18n="sk_ia2">Integração de LLMs em sistemas</li><li data-i18n="sk_ia3">Python para dados e ML</li></ul>
+          </div>
+          <div class="skill-card">
+            <h3 class="mono">lead/</h3>
+            <ul role="list"><li data-i18n="sk_l1">Arquitetura de software</li><li data-i18n="sk_l2">Liderança técnica · mentoria</li><li data-i18n="sk_l3">Clean Code · code review</li><li data-i18n="sk_l4">Gestão de projetos (PMI)</li></ul>
+          </div>
+        </div>
+        <p class="skills-langs mono" aria-label="Idiomas" data-i18n-aria-label="sk_langs_label"><span aria-hidden="true">$ </span>langs --list → <span data-i18n="sk_langs">Português (nativo) · Inglês (B2+) · Espanhol (avançado) · Francês (básico)</span></p>
+      </div>
+    </section>
+
+    <!-- ===== Serviços ===== -->
+    <section class="section section--alt" id="servicos" aria-labelledby="serv-title">
+      <div class="container">
+        <p class="eyebrow mono"><span aria-hidden="true">04</span> // <span data-i18n="serv_eyebrow">serviços</span></p>
+        <h2 id="serv-title" data-i18n="serv_title">Também crio sites — e todos nascem acessíveis</h2>
+        <p class="section-lead" data-i18n="serv_lead">Além da atuação corporativa, desenvolvo sites para profissionais e empresas: rápidos, seguros, otimizados para o Google e — de série — acessíveis segundo o eMAG e a WCAG, para que ninguém fique de fora. Quer ver na prática? Abra o painel "Acessibilidade" aqui do site.</p>
+        <div class="serv-grid">
+          <div class="serv-card">
+            <span class="serv-card__icon" aria-hidden="true">🌐</span>
+            <h3 data-i18n="serv1_t">Sites institucionais</h3>
+            <p data-i18n="serv1_d">Presença digital completa para empresas, clínicas e profissionais liberais, com identidade própria e conteúdo bem estruturado.</p>
+          </div>
+          <div class="serv-card">
+            <span class="serv-card__icon" aria-hidden="true">🚀</span>
+            <h3 data-i18n="serv2_t">Landing pages</h3>
+            <p data-i18n="serv2_d">Páginas de alta conversão para campanhas, eventos e lançamentos, com integração a WhatsApp e redes sociais.</p>
+          </div>
+          <div class="serv-card">
+            <span class="serv-card__icon" aria-hidden="true">♿</span>
+            <h3 data-i18n="serv3_t">Acessibilidade eMAG/WCAG</h3>
+            <p data-i18n="serv3_d">Auditoria e adequação de sites existentes: navegação por teclado, leitores de tela, contraste, Libras, leitura em voz alta e boas práticas do modelo brasileiro eMAG.</p>
+          </div>
+          <div class="serv-card">
+            <span class="serv-card__icon" aria-hidden="true">🤖</span>
+            <h3 data-i18n="serv4_t">Sistemas &amp; IA sob medida</h3>
+            <p data-i18n="serv4_d">APIs, integrações e recursos de IA aplicados ao seu negócio, com a robustez de quem constrói sistemas corporativos há duas décadas.</p>
+          </div>
+        </div>
+        <p class="serv-cta-row">
+          <a class="btn btn--primary" href="https://wa.me/5561998484160?text=Ol%C3%A1%20Roberto!%20Quero%20um%20or%C3%A7amento%20de%20site." target="_blank" rel="noopener"><span data-i18n="serv_cta">Pedir orçamento no WhatsApp</span></a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Portfólio ===== -->
+    <section class="section" id="portfolio" aria-labelledby="port-title">
+      <div class="container">
+        <p class="eyebrow mono"><span aria-hidden="true">05</span> // <span data-i18n="port_eyebrow">portfólio</span></p>
+        <h2 id="port-title" data-i18n="port_title">Sites entregues a clientes</h2>
+        <div class="port-grid">
+
+          <article class="port-card">
+            <a class="port-card__frame" href="https://euroberto-br.github.io/institutobioequilibrio/" target="_blank" rel="noopener" aria-labelledby="pc1-t">
+              <span class="port-card__bar" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="port-card__preview port-card__preview--bio" aria-hidden="true">Bio<br>Equilíbrio</span>
+            </a>
+            <div class="port-card__body">
+              <h3 id="pc1-t">Instituto BioEquilíbrio</h3>
+              <p data-i18n="pc1_d">Site institucional de terapias integrativas (Biomagnetismo, Florais de Bach, Psicanálise) para a terapeuta Paula Cristina — São Paulo/SP.</p>
+              <p class="port-card__links mono">
+                <a href="https://euroberto-br.github.io/institutobioequilibrio/" target="_blank" rel="noopener" data-i18n="port_visit">visitar site ↗</a>
+                <a href="https://github.com/euroberto-br/institutobioequilibrio" target="_blank" rel="noopener">github ↗</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="port-card">
+            <a class="port-card__frame" href="https://delegadoyasser.com.br" target="_blank" rel="noopener" aria-labelledby="pc2-t">
+              <span class="port-card__bar" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="port-card__preview port-card__preview--yasser" aria-hidden="true">Delegado<br>Yasser</span>
+            </a>
+            <div class="port-card__body">
+              <h3 id="pc2-t">Delegado Yasser</h3>
+              <p data-i18n="pc2_d">Site institucional com domínio próprio para o delegado Yasser — presença digital profissional e conteúdo público.</p>
+              <p class="port-card__links mono">
+                <a href="https://delegadoyasser.com.br" target="_blank" rel="noopener" data-i18n="port_visit">visitar site ↗</a>
+                <a href="https://github.com/euroberto-br/delegadoyasser" target="_blank" rel="noopener">github ↗</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="port-card">
+            <a class="port-card__frame" href="https://lukascapetinga.com.br" target="_blank" rel="noopener" aria-labelledby="pc3-t">
+              <span class="port-card__bar" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="port-card__preview port-card__preview--lukas" aria-hidden="true">Arquitetura<br>Corporal</span>
+            </a>
+            <div class="port-card__body">
+              <h3 id="pc3-t">Lukas Capetinga — Arquitetura Corporal</h3>
+              <p data-i18n="pc3_d">Site para personal trainer com metodologia própria, incluindo expansão para atendimento em condomínios.</p>
+              <p class="port-card__links mono">
+                <a href="https://lukascapetinga.com.br" target="_blank" rel="noopener" data-i18n="port_visit">visitar site ↗</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="port-card">
+            <a class="port-card__frame" href="https://euroberto-br.github.io/evolux/" target="_blank" rel="noopener" aria-labelledby="pc4-t">
+              <span class="port-card__bar" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="port-card__preview port-card__preview--evolux" aria-hidden="true">EVOLUX</span>
+            </a>
+            <div class="port-card__body">
+              <h3 id="pc4-t">EVOLUX — Robótica FLL</h3>
+              <p data-i18n="pc4_d">Site do grupo de robótica EVOLUX, que disputa a FIRST LEGO League (FLL) — equipe, projetos e trajetória nas competições.</p>
+              <p class="port-card__links mono">
+                <a href="https://euroberto-br.github.io/evolux/" target="_blank" rel="noopener" data-i18n="port_visit">visitar site ↗</a>
+                <a href="https://github.com/euroberto-br/evolux" target="_blank" rel="noopener">github ↗</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="port-card">
+            <a class="port-card__frame" href="https://euroberto-br.github.io/festa-enzo/" target="_blank" rel="noopener" aria-labelledby="pc5-t">
+              <span class="port-card__bar" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="port-card__preview port-card__preview--enzo" aria-hidden="true">Festa<br>do Enzo</span>
+            </a>
+            <div class="port-card__body">
+              <h3 id="pc5-t">Festa do Enzo</h3>
+              <p data-i18n="pc5_d">Site de evento com cardápio interativo para festa infantil — prova de que todo projeto merece capricho.</p>
+              <p class="port-card__links mono">
+                <a href="https://euroberto-br.github.io/festa-enzo/" target="_blank" rel="noopener" data-i18n="port_visit">visitar site ↗</a>
+                <a href="https://github.com/euroberto-br/festa-enzo" target="_blank" rel="noopener">github ↗</a>
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <h3 class="port-gh-title mono"><span aria-hidden="true">$</span> git ls-remote — <span data-i18n="gh_title">repositórios públicos no GitHub</span></h3>
+        <p class="section-lead" data-i18n="gh_lead">Lista carregada em tempo real da API do GitHub. Novos projetos — e mais variados — em construção.</p>
+        <div id="gh-repos" class="gh-grid" aria-live="polite">
+          <p class="mono" data-i18n="gh_loading">carregando repositórios…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Formação ===== -->
+    <section class="section section--alt" id="formacao" aria-labelledby="form-title">
+      <div class="container">
+        <p class="eyebrow mono"><span aria-hidden="true">06</span> // <span data-i18n="form_eyebrow">formação</span></p>
+        <h2 id="form-title" data-i18n="form_title">Formação &amp; certificações</h2>
+        <div class="form-grid">
+          <div>
+            <h3 class="mono" data-i18n="form_edu">// formação acadêmica</h3>
+            <ul class="form-list" role="list">
+              <li><strong data-i18n="edu1_t">Pós-graduação em Engenharia de Software com IA Aplicada</strong><br><span class="muted">UNIPDS · <span data-i18n="edu1_s">em andamento (2027)</span></span></li>
+              <li><strong data-i18n="edu2_t">Pós-graduação em Docência no Ensino Superior</strong><br><span class="muted">Faculdade Focus · 2022</span></li>
+              <li><strong data-i18n="edu3_t">Pós-graduação em Gerenciamento de Projetos (PMI)</strong><br><span class="muted">Unyleya · 2015</span></li>
+              <li><strong data-i18n="edu4_t">Tecnólogo em Processos Gerenciais</strong><br><span class="muted">UNIP · 2020</span></li>
+              <li><strong data-i18n="edu5_t">Tecnólogo em Sistemas para Internet</strong><br><span class="muted">UniAnhanguera · 2011</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mono" data-i18n="form_cert">// certificações microsoft</h3>
+            <ul class="form-list" role="list">
+              <li><strong>MCPS</strong> — Microsoft Certified Professional</li>
+              <li><strong>MCTS</strong> — .NET Framework 4, Web Applications</li>
+              <li><strong>MCTS</strong> — .NET Framework 4, Data Access</li>
+              <li><strong>MTA</strong> — Web Development Fundamentals</li>
+              <li><strong>MS</strong> — Programming in HTML5 with JavaScript and CSS3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contato ===== -->
+    <section class="section" id="contato" aria-labelledby="cont-title">
+      <div class="container contato__wrap">
+        <p class="eyebrow mono"><span aria-hidden="true">07</span> // <span data-i18n="cont_eyebrow">contato</span></p>
+        <h2 id="cont-title" data-i18n="cont_title">Vamos construir algo juntos?</h2>
+        <p class="section-lead" data-i18n="cont_lead">Projeto, proposta, aula, mentoria ou aquele bug impossível — a forma mais rápida de me encontrar é o WhatsApp.</p>
+        <div class="contato__grid">
+          <a class="contact-card contact-card--wa" href="https://wa.me/5561998484160?text=Ol%C3%A1%20Roberto!%20Vim%20pelo%20site%20roberto.inf.br." target="_blank" rel="noopener">
+            <span class="contact-card__k mono">whatsapp</span>
+            <span class="contact-card__v">(61) 99848-4160</span>
+          </a>
+          <a class="contact-card" href="mailto:roberto@roberto.inf.br">
+            <span class="contact-card__k mono">email</span>
+            <span class="contact-card__v">roberto@roberto.inf.br</span>
+          </a>
+          <a class="contact-card" href="https://www.linkedin.com/in/roberto084" target="_blank" rel="noopener">
+            <span class="contact-card__k mono">linkedin</span>
+            <span class="contact-card__v">/in/roberto084</span>
+          </a>
+          <a class="contact-card" href="https://github.com/euroberto-br" target="_blank" rel="noopener">
+            <span class="contact-card__k mono">github</span>
+            <span class="contact-card__v">/euroberto-br</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Declaração de acessibilidade ===== -->
+    <section class="section section--alt" id="acessibilidade" aria-labelledby="acc-title">
+      <div class="container">
+        <p class="eyebrow mono"><span aria-hidden="true">08</span> // <span data-i18n="acc_eyebrow">acessibilidade</span></p>
+        <h2 id="acc-title" data-i18n="acc_title">Declaração de acessibilidade</h2>
+        <p class="section-lead" data-i18n="acc_lead">Este site foi construído para ser usado por todas as pessoas — com ou sem deficiência — e é também a vitrine do padrão que aplico em todos os projetos que entrego.</p>
+        <div class="acc-grid">
+          <div class="acc-card">
+            <span class="acc-card__icon" aria-hidden="true">👁</span>
+            <h3 data-i18n="acc_visual_t">Para quem tem deficiência visual</h3>
+            <p data-i18n="acc_visual_d">Compatível com leitores de tela (NVDA, JAWS, TalkBack, VoiceOver): estrutura semântica, textos alternativos, regiões nomeadas e anúncios de mudanças de estado. Alto contraste, tema claro/escuro, ajuste de tamanho de texto e espaçamentos, fonte para baixa visão e leitura em voz alta integrada.</p>
+          </div>
+          <div class="acc-card">
+            <span class="acc-card__icon" aria-hidden="true">🤟</span>
+            <h3 data-i18n="acc_hearing_t">Para quem tem deficiência auditiva</h3>
+            <p data-i18n="acc_hearing_d">Tradução para Libras em qualquer trecho do site pelo VLibras (Governo Federal) — basta usar o botão azul de mãos na lateral. Todo o conteúdo é textual: nenhuma informação depende de áudio. Vídeos futuros terão legendas e transcrição.</p>
+          </div>
+          <div class="acc-card">
+            <span class="acc-card__icon" aria-hidden="true">⌨</span>
+            <h3 data-i18n="acc_motor_t">Para quem navega só pelo teclado</h3>
+            <p data-i18n="acc_motor_d">Todas as funções acessíveis por teclado, com foco sempre visível, atalhos padronizados eMAG e sem armadilhas de foco. Animações podem ser pausadas e a preferência do sistema por movimento reduzido é respeitada.</p>
+          </div>
+        </div>
+        <h3 class="acc-sc-title mono" data-i18n="acc_shortcuts_t">Atalhos de teclado</h3>
+        <ul class="acc-shortcuts" role="list">
+          <li><kbd>Alt</kbd> + <kbd>1</kbd> <span data-i18n="acc_sc1">Ir para o conteúdo</span></li>
+          <li><kbd>Alt</kbd> + <kbd>2</kbd> <span data-i18n="acc_sc2">Ir para o menu</span></li>
+          <li><kbd>Alt</kbd> + <kbd>3</kbd> <span data-i18n="acc_sc3">Ir para o contato</span></li>
+          <li><kbd>Alt</kbd> + <kbd>4</kbd> <span data-i18n="acc_sc4">Ir para o rodapé</span></li>
+          <li><kbd>Alt</kbd> + <kbd>0</kbd> <span data-i18n="acc_sc0">Abrir painel de acessibilidade</span></li>
+        </ul>
+        <p class="muted" data-i18n="acc_sc_hint">No Windows use Alt + número (no Firefox, Alt + Shift + número); no Mac, Control + Option + número.</p>
+        <p data-i18n="acc_conform">Meta de conformidade: eMAG 3.1 e WCAG 2.1 nível AA. Encontrou uma barreira? Me avise pelo WhatsApp ou email — corrigir é prioridade.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="rodape">
+    <div class="container site-footer__inner">
+      <p class="mono">© <span id="year">2026</span> Roberto Oliveira · roberto.inf.br · <a href="#acessibilidade" data-i18n="footer_acc_link">Acessibilidade</a></p>
+      <p class="mono muted" data-i18n="footer_a11y">Site desenvolvido seguindo as diretrizes de acessibilidade eMAG e WCAG 2.1 AA. Atalhos: Alt+1 conteúdo · Alt+2 menu · Alt+3 contato · Alt+4 rodapé · Alt+0 painel de acessibilidade.</p>
+      <p class="mono muted" data-i18n="footer_made">Feito à mão com HTML, CSS e JavaScript — sem frameworks, como nos bons tempos, mas com IA como copiloto.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Botão e painel de acessibilidade ===== -->
+  <button type="button" id="a11y-fab" class="a11y-fab" accesskey="0"
+          aria-haspopup="dialog" aria-expanded="false" aria-controls="a11y-panel">
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a2.2 2.2 0 1 1 0 4.4A2.2 2.2 0 0 1 12 2Zm9 5.6c-2.6.6-5 1-6.9 1.1v3.4l2.6 8.1a1.1 1.1 0 0 1-2.1.7L12.3 14h-.6l-2.3 6.9a1.1 1.1 0 0 1-2.1-.7l2.6-8.1V8.7C8 8.6 5.6 8.2 3 7.6a1.05 1.05 0 0 1 .5-2c3.2.7 6 1.1 8.5 1.1s5.3-.4 8.5-1.1a1.05 1.05 0 0 1 .5 2Z"/></svg>
+    <span data-i18n="pnl_open">Acessibilidade</span>
+  </button>
+
+  <div id="a11y-panel" class="a11y-panel" hidden>
+    <div class="a11y-panel__backdrop" data-panel-close></div>
+    <div class="a11y-panel__sheet" role="dialog" aria-modal="true" aria-labelledby="a11y-panel-title">
+      <div class="a11y-panel__head">
+        <h2 id="a11y-panel-title" data-i18n="pnl_title">Recursos de acessibilidade</h2>
+        <button type="button" class="a11y-panel__close" data-panel-close aria-label="Fechar painel" data-i18n-aria-label="pnl_close"><span aria-hidden="true">✕</span></button>
+      </div>
+      <div class="a11y-panel__body">
+
+        <h3 class="pnl-group mono" data-i18n="pnl_g_text">Texto e leitura</h3>
+        <div class="pnl-stepper">
+          <span class="pnl-stepper__label" id="lbl-font" data-i18n="pnl_font">Tamanho do texto</span>
+          <span class="pnl-stepper__ctrl" role="group" aria-labelledby="lbl-font">
+            <button type="button" class="pnl-btn" data-step="font:-1" aria-label="Diminuir" data-i18n-aria-label="pnl_dec">−</button>
+            <output class="mono" id="val-font" aria-live="off">100%</output>
+            <button type="button" class="pnl-btn" data-step="font:1" aria-label="Aumentar" data-i18n-aria-label="pnl_inc">+</button>
+          </span>
+        </div>
+        <div class="pnl-stepper">
+          <span class="pnl-stepper__label" id="lbl-line" data-i18n="pnl_line">Espaço entre linhas</span>
+          <span class="pnl-stepper__ctrl" role="group" aria-labelledby="lbl-line">
+            <button type="button" class="pnl-btn" data-step="line:-1" aria-label="Diminuir" data-i18n-aria-label="pnl_dec">−</button>
+            <output class="mono" id="val-line" aria-live="off">100%</output>
+            <button type="button" class="pnl-btn" data-step="line:1" aria-label="Aumentar" data-i18n-aria-label="pnl_inc">+</button>
+          </span>
+        </div>
+        <div class="pnl-stepper">
+          <span class="pnl-stepper__label" id="lbl-letter" data-i18n="pnl_letter">Espaço entre letras</span>
+          <span class="pnl-stepper__ctrl" role="group" aria-labelledby="lbl-letter">
+            <button type="button" class="pnl-btn" data-step="letter:-1" aria-label="Diminuir" data-i18n-aria-label="pnl_dec">−</button>
+            <output class="mono" id="val-letter" aria-live="off">0</output>
+            <button type="button" class="pnl-btn" data-step="letter:1" aria-label="Aumentar" data-i18n-aria-label="pnl_inc">+</button>
+          </span>
+        </div>
+        <button type="button" class="pnl-switch" role="switch" aria-checked="false" data-feature="readable">
+          <span class="pnl-switch__text">
+            <span data-i18n="pnl_readable">Fonte de alta legibilidade</span>
+            <small data-i18n="pnl_readable_hint">Atkinson Hyperlegible — desenhada para baixa visão</small>
+          </span>
+          <span class="pnl-switch__track" aria-hidden="true"></span>
+        </button>
+
+        <h3 class="pnl-group mono" data-i18n="pnl_g_visual">Aparência</h3>
+        <button type="button" class="pnl-switch" role="switch" aria-checked="false" data-feature="contrast">
+          <span class="pnl-switch__text"><span data-i18n="pnl_contrast">Alto contraste</span></span>
+          <span class="pnl-switch__track" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="pnl-switch" role="switch" aria-checked="false" data-feature="theme">
+          <span class="pnl-switch__text"><span data-i18n="pnl_theme_light">Tema claro</span></span>
+          <span class="pnl-switch__track" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="pnl-switch" role="switch" aria-checked="false" data-feature="links">
+          <span class="pnl-switch__text"><span data-i18n="pnl_links">Destacar links</span></span>
+          <span class="pnl-switch__track" aria-hidden="true"></span>
+        </button>
+
+        <h3 class="pnl-group mono" data-i18n="pnl_g_nav">Navegação e movimento</h3>
+        <button type="button" class="pnl-switch" role="switch" aria-checked="false" data-feature="guide">
+          <span class="pnl-switch__text">
+            <span data-i18n="pnl_guide">Guia de leitura</span>
+            <small data-i18n="pnl_guide_hint">Régua que acompanha o mouse para não perder a linha</small>
+          </span>
+          <span class="pnl-switch__track" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="pnl-switch" role="switch" aria-checked="false" data-feature="motion">
+          <span class="pnl-switch__text"><span data-i18n="pnl_motion">Pausar animações</span></span>
+          <span class="pnl-switch__track" aria-hidden="true"></span>
+        </button>
+
+        <h3 class="pnl-group mono" data-i18n="pnl_g_audio">Voz e Libras</h3>
+        <p class="pnl-hint" data-i18n="pnl_tts_hint">Ouça o conteúdo da página com a voz do navegador</p>
+        <div class="pnl-tts">
+          <button type="button" class="pnl-btn pnl-btn--wide" id="tts-play">Ouvir a página</button>
+          <button type="button" class="pnl-btn pnl-btn--wide" id="tts-stop" hidden>Parar leitura</button>
+        </div>
+        <div class="pnl-stepper">
+          <span class="pnl-stepper__label" id="lbl-rate" data-i18n="tts_rate">Velocidade da leitura</span>
+          <span class="pnl-stepper__ctrl" role="group" aria-labelledby="lbl-rate">
+            <button type="button" class="pnl-btn" data-step="rate:-1" aria-label="Diminuir" data-i18n-aria-label="pnl_dec">−</button>
+            <output class="mono" id="val-rate" aria-live="off">1.0×</output>
+            <button type="button" class="pnl-btn" data-step="rate:1" aria-label="Aumentar" data-i18n-aria-label="pnl_inc">+</button>
+          </span>
+        </div>
+        <p class="pnl-hint"><strong data-i18n="pnl_libras">Tradução para Libras</strong><br><span data-i18n="pnl_libras_hint">Use o botão azul de mãos, na lateral da tela, para traduzir qualquer texto para Libras (VLibras — governo federal).</span></p>
+
+        <button type="button" class="pnl-btn pnl-btn--reset" id="pnl-reset" data-i18n="pnl_reset">Restaurar padrões</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== VLibras (tradutor oficial de Libras — Governo Federal) ===== -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    try { if (window.VLibras) { new window.VLibras.Widget("https://vlibras.gov.br/app"); } } catch (e) { /* offline */ }
+  </script>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
